@@ -2,35 +2,68 @@
 <html>
 
 <head>
+    <script src="https://www.google.com/jsapi?key=AIzaSyDVsQf1ePPFON6EVu7Q-GMPuAthNXyDqH8"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://twitter.github.io/bootstrap/assets/js/bootstrap-transition.js"></script>
+    <script type="text/javascript" src="http://twitter.github.io/bootstrap/assets/js/bootstrap-collapse.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+
+
     <meta charset='utf-8' />
     <title></title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css' rel='stylesheet' />
-    <link href='css/home.css' rel='stylesheet' />
-    <script src='js/home.js'></script>
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href='css/home.css' rel='stylesheet' />
+    <script src='js/home.js'></script>
 </head>
 
 <body>
-    
+    <div id="google_translate_element"></div>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <div id="logo"><img src="http://i.imgur.com/HtH0q9k.png" alt="County Logo" height="100" width="240"></div>
     <div id='map'></div>
-    
     <script>
         mapboxgl.accessToken = 'pk.eyJ1IjoiZXBsZXRjaGVyNzIiLCJhIjoiY2l6ZnVva2h1MDB0ejJ3bm5vNTAzbzdhcSJ9.ciZ3E6UmdTqne8yBVP9byQ';
         var map = new mapboxgl.Map({
-            container: 'map'
-            , style: 'mapbox://styles/epletcher72/cj53h2v2p0byb2slw08g5nfhk'
-            , center: [-122.6, 38]
-            , zoom: 8.5
-            , interactive: false
+            container: 'map',
+            style: 'mapbox://styles/epletcher72/cj53h2v2p0byb2slw08g5nfhk',
+            center: [-122.6, 38.04],
+            zoom: 9.4,
+            interactive: false
         });
     </script>
+    <div class="headline-container">
+        <div class="headline" >
+            <h1 id="home-headline-h1">Get Active Marin</h1>
+            <h2 id="home-headline-h2">Find parks and activities near you</h2>
+            <button class="loginBtn loginBtn--normal">
+  Login
+</button>
+
+            <button class="loginBtn loginBtn--google">
+  Login with Google
+</button>
+            or
+            <button class="login-button">
+  Login
+</button>
+            <div class="emails btn-signup">
+                <a data-ng-click="$event.preventDefault();loadModal('site-home', 'signup')" href="/auth/signup" onclick="ga('send', 'pageview', '/signup/email/modal');" target="_self">
+              Sign up using your email address
+            </a>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
