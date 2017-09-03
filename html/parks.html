@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Google API Key -->
+    <script src="https://www.google.com/jsapi?key=AIzaSyDVsQf1ePPFON6EVu7Q-GMPuAthNXyDqH8"></script>
+    <!-- Latest jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- Latest mapbox -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css' rel='stylesheet' />
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <!-- Latest bootstrap -->
+    <script type="text/javascript" src="http://twitter.github.io/bootstrap/assets/js/bootstrap-transition.js"></script>
+    <script type="text/javascript" src="http://twitter.github.io/bootstrap/assets/js/bootstrap-collapse.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- other scripting and styling -->
+    <link href='css/home.css' rel='stylesheet' />
+    <script src='js/home.js'></script>
+</head>
+
+<body>
+    <div>
+        <form action="">
+            <input type="radio" name="rdo" id="yes" checked />
+            <input type="radio" name="rdo" id="no" />
+            <div class="switch">
+                <label1 for="yes">Yes</label1>
+                <label1 for="no">No</label1>
+                <span></span>
+            </div>
+        </form>
+    </div>
+    <div id="map"></div>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+                <a class="navbar-brand" href="#">Get Active Marin</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#about">Activities</a></li>
+                    <li class="active"><a href="#">Parks</a></li>
+                    <li><a href="#contact">Notifications</a></li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://www.google.com">My Calender</a></li>
+                    <li><a href="https://www.google.com">Profile</a></li>
+                    <!--                    <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>-->
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiZXBsZXRjaGVyNzIiLCJhIjoiY2l6ZnVva2h1MDB0ejJ3bm5vNTAzbzdhcSJ9.ciZ3E6UmdTqne8yBVP9byQ';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/epletcher72/cj5k7vg1l1bvq2sn48gmg39yh',
+            center: [-122.6, 38.04],
+            zoom: 9.5,
+            //interactive: false
+        });
+
+    </script>
+    <div id="filter">
+        <label for="panel_1">Open?</label>
+        <input type="checkbox" name="panel" id="panel_1">
+        <div class="collapsible">
+
+        </div>
+        <label for="panel_2">Dogs</label>
+
+        <input type="checkbox" name="panel" id="panel_2">
+
+        <div class="collapsible">
+            hi
+        </div>
+        <label for="panel_3">Fishing</label>
+        <input type="checkbox" name="panel" id="panel_3">
+        <div class="collapsible">
+            <p>Loti.</p>
+        </div>
+        <label for="panel_4">Hiking</label>
+        <input type="checkbox" name="panel" id="panel_4">
+        <div class="collapsible">
+            <p>Loti.</p>
+        </div>
+        <label for="panel_5">Horseback Riding</label>
+        <input type="checkbox" name="panel" id="panel_5">
+        <div class="collapsible">
+            <p>Loti.</p>
+        </div>
+        <label for="panel_6">Mountain Biking</label>
+        <input type="checkbox" name="panel" id="panel_6">
+        <div class="collapsible">
+            <p>Loti.</p>
+        </div>
+        <label for="panel_7">Kayaking</label>
+        <input type="checkbox" name="panel" id="panel_7">
+        <div class="collapsible">
+            <p>Loti.</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
