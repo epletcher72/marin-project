@@ -14,7 +14,7 @@ var quail = {
     kayaking: false
 }
 
-$.get('/park', quail, function success(data, textStatus) {
+$.get('/actiive', quail, function success(data, textStatus) {
     console.log(data)
     console.log(textStatus)
 });

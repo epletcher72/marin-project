@@ -25,18 +25,6 @@
 </head>
 
 <body>
-    <div>
-        <form action="">
-            <input type="radio" name="rdo" id="yes" checked />
-            <input type="radio" name="rdo" id="no" />
-            <div class="switch">
-                <label1 for="yes">Yes</label1>
-                <label1 for="no">No</label1>
-                <span></span>
-            </div>
-        </form>
-    </div>
-    <div id="map"></div>
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -50,8 +38,8 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#about">Activities</a></li>
-                    <li class="active"><a href="#">Parks</a></li>
+                    <li class="active"><a href="#">Activities</a></li>
+                    <li><a href="html/parks.html">Parks</a></li>
                     <li><a href="#contact">Notifications</a></li>
 
                 </ul>
@@ -64,58 +52,95 @@
             <!--/.nav-collapse -->
         </div>
     </nav>
-    <script>
-        mapboxgl.accessToken = 'pk.eyJ1IjoiZXBsZXRjaGVyNzIiLCJhIjoiY2l6ZnVva2h1MDB0ejJ3bm5vNTAzbzdhcSJ9.ciZ3E6UmdTqne8yBVP9byQ';
-        var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/epletcher72/cj5k7vg1l1bvq2sn48gmg39yh',
-            center: [-122.6, 38.04],
-            zoom: 9.5,
-            //interactive: false
-        });
 
-    </script>
     <div id="filter">
-        <label for="panel_1">Open?</label>
-        <input type="checkbox" name="panel" id="panel_1">
+        <label id="blue" for="panel_1">Search</label>
+        <input type="checkbox" name="searchPanel" id="panel_1" checked>
         <div class="collapsible">
-
+            <div class="input-group col-md-12">
+                <input type="text" class="  search-query form-control" placeholder="Search" />
+                <span class="input-group-btn">
+                                    <button class="btn btn-danger" type="button">
+                                        <span class=" glyphicon glyphicon-search"></span>
+                </button>
+                </span>
+            </div>
         </div>
-        <label for="panel_2">Dogs</label>
+        <label id="blue" for="panel_2">Filter by:</label>
 
-        <input type="checkbox" name="panel" id="panel_2">
+        <input type="checkbox" name="noPanel" id="panel_2">
 
         <div class="collapsible">
             hi
         </div>
-        <label for="panel_3">Fishing</label>
+        <label id="orange" for="panel_3">Option 1</label>
         <input type="checkbox" name="panel" id="panel_3">
         <div class="collapsible">
             <p>Loti.</p>
         </div>
-        <label for="panel_4">Hiking</label>
+        <label id="orange" for="panel_4">Option 2</label>
         <input type="checkbox" name="panel" id="panel_4">
         <div class="collapsible">
             <p>Loti.</p>
         </div>
-        <label for="panel_5">Horseback Riding</label>
+        <label id="orange" for="panel_5">Option 3</label>
         <input type="checkbox" name="panel" id="panel_5">
         <div class="collapsible">
             <p>Loti.</p>
         </div>
-        <label for="panel_6">Mountain Biking</label>
+        <label id="orange" for="panel_6">Option 4</label>
         <input type="checkbox" name="panel" id="panel_6">
         <div class="collapsible">
             <p>Loti.</p>
         </div>
-        <label for="panel_7">Kayaking</label>
+        <label id="orange" for="panel_7">Option 5</label>
         <input type="checkbox" name="panel" id="panel_7">
         <div class="collapsible">
-            <p>Loti.</p>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="checkbox">
+                        <label>
+										<input type="checkbox" value="">
+										0 - 5$
+									</label>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="checkbox">
+                        <label>
+										<input type="checkbox" value="">
+										10$ - 20$
+									</label>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="checkbox">
+                        <label>
+										<input type="checkbox" value="">
+										20$ - 35$
+									</label>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="checkbox">
+                        <label>
+										<input type="checkbox" value="">
+										35$ - 50$
+									</label>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="checkbox">
+                        <label>
+										<input type="checkbox" value="">
+										More Than 50$
+									</label>
+                    </div>
+                </li>
+            </ul>
         </div>
 
     </div>
-
 </body>
 
 </html>

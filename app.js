@@ -4,7 +4,7 @@ const app = express()
 app.use(express.static('public'))
 
 app.get('/', function (req, res) {
-  res.sendFile(__dirname + '/html/home.html')
+  res.sendFile(__dirname + '/public/html/parks.html')
 })
 
 app.listen(3000, function () {
