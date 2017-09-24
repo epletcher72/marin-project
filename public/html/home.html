@@ -3,12 +3,10 @@
 
 <head>
     <script src="https://www.google.com/jsapi?key=AIzaSyDVsQf1ePPFON6EVu7Q-GMPuAthNXyDqH8"></script>
-
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://twitter.github.io/bootstrap/assets/js/bootstrap-transition.js"></script>
     <script type="text/javascript" src="http://twitter.github.io/bootstrap/assets/js/bootstrap-collapse.js"></script>
     <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
-
 
     <meta charset='utf-8' />
     <title></title>
@@ -41,9 +39,10 @@
             zoom: 9.4,
             interactive: false
         });
+
     </script>
     <div class="headline-container">
-        <div class="headline" >
+        <div class="headline">
             <h1 id="home-headline-h1">Get Active Marin</h1>
             <h2 id="home-headline-h2">Find parks and activities near you</h2>
             <button class="loginBtn loginBtn--normal">
@@ -52,10 +51,6 @@
 
             <button class="loginBtn loginBtn--google">
   Login with Google
-</button>
-            or
-            <button class="login-button">
-  Login
 </button>
             <div class="emails btn-signup">
                 <a data-ng-click="$event.preventDefault();loadModal('site-home', 'signup')" href="/auth/signup" onclick="ga('send', 'pageview', '/signup/email/modal');" target="_self">

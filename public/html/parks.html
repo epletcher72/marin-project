@@ -7,8 +7,8 @@
     <!-- Latest jquery -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <!-- Latest mapbox -->
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.40.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.40.1/mapbox-gl.css' rel='stylesheet' />
     <meta charset='utf-8' />
     <title></title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
@@ -66,6 +66,8 @@
             <!--/.nav-collapse -->
         </div>
     </nav>
+
+    <div id='map'></div>
     <script>
         mapboxgl.accessToken = 'pk.eyJ1IjoiZXBsZXRjaGVyNzIiLCJhIjoiY2l6ZnVva2h1MDB0ejJ3bm5vNTAzbzdhcSJ9.ciZ3E6UmdTqne8yBVP9byQ';
         var map = new mapboxgl.Map({
@@ -73,12 +75,12 @@
             style: 'mapbox://styles/epletcher72/cj5k7vg1l1bvq2sn48gmg39yh',
             center: [-122.6, 38.04],
             zoom: 9.5,
-            //interactive: false
+            interactive: false
         });
 
     </script>
 
-<div id="filter_square"><input type="checkbox" id="switch" /><label for="switch">Toggle</label></div>
+    <div id="filter_square"><input type="checkbox" id="switch" /><label for="switch">Toggle</label></div>
 </body>
 
 </html>
